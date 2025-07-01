@@ -60,8 +60,13 @@
     window.addEventListener('scroll', function(){
       if (window.scrollY > 350){
         button.classList.add('fixed')
-      } else{
+      }
+       else{
         button.classList.remove('fixed');
+      }
+
+      if(window.scrollY > 1800){
+        button.classList.remove('fixed')
       }
     });
 
@@ -75,16 +80,8 @@
       }
     }
 
-  let searchButton = document.querySelector('.fa-solid fa-magnifying-glass');
-  searchButton.addEventListener('click', search)
 
 
-    let words = ["Laptop", "Mobile Phone", "Microsoft"];
-
-    function search(){
-      let searchDisplay = prompt("Search");
-      document.querySelector('.search').innerHTML = (words.indexOf(searchDisplay));
-    }
 
     
 
